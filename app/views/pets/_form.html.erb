@@ -1,0 +1,67 @@
+<%= form_with(model: pet) do |form| %>
+  <% if pet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+        <% pet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :weight, style: "display: block" %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_birth, style: "display: block" %>
+    <%= form.date_field :date_of_birth %>
+  </div>
+
+  <div>
+    <%= form.label :adopted_at, style: "display: block" %>
+    <%= form.datetime_field :adopted_at %>
+  </div>
+
+  <div>
+    <%= form.label :wakeup_time, style: "display: block" %>
+    <%= form.time_field :wakeup_time %>
+  </div>
+
+  <div>
+    <%= form.label :desexed, style: "display: block" %>
+    <%= form.check_box :desexed %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
