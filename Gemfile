@@ -9,8 +9,6 @@ gem "rails", "~> 7.0.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use jdbc as the database for Active Record
-gem "activerecord-jdbc-adapter"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -23,3 +21,6 @@ group :development do
   # gem "spring"
 end
 
+# Use jdbc as the database for Active Record
+gem 'activerecord-jdbc-alt-adapter'
+gem 'jdbc-mssql', '~> 0.9.0'
